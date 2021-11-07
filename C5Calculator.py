@@ -1,47 +1,26 @@
 import sys
 import requests
 from PyQt5.QtWidgets import *
+from PyQt5 import QtCore, QtGui
+
+
 
 
 MEMBER_TIERS = ['Trial Member', 'Full Member', 'Public Guest']
 
-class C5Calculator(QDialog):
+class C5Calculator(QWidget):
 
     def __init__(self, parent=None):
 
         super(C5Calculator, self).__init__(parent)
 
         self.setWindowTitle('C5 Calculator')
+        self.setWindowIcon(QtGui.QIcon('blackhole.png'))
 
        # self.market_prices = C5Calculator.getPrices()
 
 
-        self.party_size = QSpinBox()
-
-        self.sites_done = QSpinBox()
-
-
-        party_size_label = QLabel('Party Member Count: ')
-        sites_done_label = QLabel('Number of sites done: ')
-
-        layout = QVBoxLayout()
-        layout.addWidget(party_size_label)
-        layout.addWidget(self.party_size)
-        layout.addWidget(sites_done_label)
-        layout.addWidget(self.sites_done)
-
-
-        self.setLayout(layout)
-
-
-
-    def checkIfBlueBook(self):
-
-        pass
-
-
-
-
+  
 
 
 
@@ -77,9 +56,6 @@ class C5Calculator(QDialog):
         print(price_book)
 
         return price_book
-
-
-
 
 
 
