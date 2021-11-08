@@ -14,14 +14,7 @@ class C5Calculator(QWidget):
 
         super(C5Calculator, self).__init__(parent)
 
-        self.setWindowTitle('C5 Calculator')
-        self.setWindowIcon(QtGui.QIcon('blackhole.png'))
-
-       # self.market_prices = C5Calculator.getPrices()
-
-
-  
-
+       
 
 
 
