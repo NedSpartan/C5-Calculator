@@ -14,7 +14,63 @@ class C5Calculator(QWidget):
 
         super(C5Calculator, self).__init__(parent)
 
-       
+        """Title and Window Icon"""
+
+        self.setWindowTitle('C5 Calculator')
+
+        self.setWindowIcon(QtGui.QIcon('blackhole.png'))
+
+        """Gets Current Blue Book Prices"""
+        self.prices = C5Calculator.getPrices()
+
+        """Layout"""
+        
+        """Sleeper Drone AI Nexus Box"""
+        sleeper_drone_ai_nexus_label = QLabel('Sleeper Drone AI Nexus')
+        sdan_price = self.prices['Sleeper Drone AI Nexus']
+        sleeper_drone_ai_nexus_price = QLabel(f'{sdan_price}')
+        sleeper_drone_ai_nexus = QVBoxLayout()
+        sleeper_drone_ai_nexus.addWidget(sleeper_drone_ai_nexus_label)
+        sleeper_drone_ai_nexus.addWidget(sleeper_drone_ai_nexus_price)
+
+        """Sleeper Data Library"""
+        sleeper_data_library_label = QLabel('Sleeper Data Library')
+        sdl_price = self.prices['Sleeper Data Library']
+        sleeper_data_library_price = QLabel(f'{sdl_price}')
+        sleeper_data_library = QVBoxLayout()
+        sleeper_data_library.addWidget(sleeper_data_library_label)
+        sleeper_data_library.addWidget(sleeper_data_library_price)
+
+        """Neural Network Analzyer"""
+        neural_network_analyzer_label = QLabel('Neural Network Analzyer')
+        nna_price = self.prices['Neural Network Analyzer']
+        neural_network_analyzer_price = QLabel(f'{nna_price}')
+        neural_network_analyzer = QVBoxLayout()
+        neural_network_analyzer.addWidget(neural_network_analyzer_label)
+        neural_network_analyzer.addWidget(neural_network_analyzer_price)
+
+
+        """Ancient Coordinates Database"""
+        ancient_coordinates_database_label = QLabel('Ancient Coordinates Database')
+        acd_price = self.prices['Ancient Coordinates Database']
+        ancient_coordinates_database_price = QLabel(f'{acd_price}')
+        ancient_coordinates_database = QVBoxLayout()
+        ancient_coordinates_database.addWidget(ancient_coordinates_database_label)
+        ancient_coordinates_database.addWidget(ancient_coordinates_database_price)
+
+        """First row of the widget"""
+        first_row = QHBoxLayout()
+        first_row.addLayout(sleeper_drone_ai_nexus)
+        first_row.addLayout(sleeper_data_library)
+        first_row.addLayout(neural_network_analyzer)
+        first_row.addLayout(ancient_coordinates_database)
+
+        """ Main Vert Layout"""
+        layout = QVBoxLayout()
+        layout.addLayout(first_row)
+
+        """Layout Setter"""
+        self.setLayout(layout)
 
 
 
