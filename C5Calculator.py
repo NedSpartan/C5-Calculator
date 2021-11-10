@@ -76,9 +76,22 @@ class C5Calculator(QWidget):
         party_member_box.addWidget(party_member_count_label)
         party_member_box.addWidget(party_member_count)
 
+
+        """Number of sites completed"""
+        site_box_label = QLabel('Number of sites completed')
+
+        site_count = QComboBox()
+        site_count.addItems(['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15'])
+
+        site_box = QVBoxLayout()
+        site_box.addWidget(site_box_label)
+        site_box.addWidget(site_count)
+
+
         """Second Row of the widget"""
         second_row = QHBoxLayout()
         second_row.addLayout(party_member_box)
+        second_row.addLayout(site_box)
 
 
         """ Main Vert Layout"""
