@@ -58,16 +58,25 @@ class C5Calculator(QWidget):
         ancient_coordinates_database.addWidget(ancient_coordinates_database_label)
         ancient_coordinates_database.addWidget(ancient_coordinates_database_price)
 
-        """First row of the widget"""
+        """First Row of the widget"""
         first_row = QHBoxLayout()
         first_row.addLayout(sleeper_drone_ai_nexus)
         first_row.addLayout(sleeper_data_library)
         first_row.addLayout(neural_network_analyzer)
         first_row.addLayout(ancient_coordinates_database)
 
+        """Second row widgets"""
+
+        
+
+        """Second Row of the widget"""
+        second_row = QHBoxLayout()
+
+
         """ Main Vert Layout"""
         layout = QVBoxLayout()
         layout.addLayout(first_row)
+        layout.addLayout(second_row)
 
         """Layout Setter"""
         self.setLayout(layout)
