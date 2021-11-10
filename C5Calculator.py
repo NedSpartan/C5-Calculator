@@ -93,11 +93,19 @@ class C5Calculator(QWidget):
         second_row.addLayout(party_member_box)
         second_row.addLayout(site_box)
 
+        """Third Row widgets"""
+
+        
+
+        """Third Row of the widget"""
+        third_row = QHBoxLayout()
+
 
         """ Main Vert Layout"""
         layout = QVBoxLayout()
         layout.addLayout(first_row)
         layout.addLayout(second_row)
+        layout.addLayout(third_row)
 
         """Layout Setter"""
         self.setLayout(layout)
