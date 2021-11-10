@@ -67,10 +67,18 @@ class C5Calculator(QWidget):
 
         """Second row widgets"""
 
-        
+        party_member_count = QComboBox()
+        party_member_count.addItems(['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15'])
+
+        party_member_count_label = QLabel('Party member size')
+
+        party_member_box = QVBoxLayout()
+        party_member_box.addWidget(party_member_count_label)
+        party_member_box.addWidget(party_member_count)
 
         """Second Row of the widget"""
         second_row = QHBoxLayout()
+        second_row.addLayout(party_member_box)
 
 
         """ Main Vert Layout"""
@@ -111,7 +119,7 @@ class C5Calculator(QWidget):
             counter += 1
 
         """Remove before production"""
-        print(price_book)
+        #print(price_book)
 
         return price_book
 
