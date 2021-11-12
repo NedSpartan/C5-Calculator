@@ -95,10 +95,24 @@ class C5Calculator(QWidget):
 
         """Third Row widgets"""
 
-        
+        party_member_list = QListView() 
+        sites_completed_list = QListView()
 
         """Third Row of the widget"""
         third_row = QHBoxLayout()
+        third_row.addWidget(party_member_list)
+        third_row.addWidget(sites_completed_list)
+
+        """Fourth Row widgets"""
+        
+        expected_results = QFormLayout()
+
+        expected_results_box = QVBoxLayout()
+        expected_results_box.addLayout(expected_results)
+
+        """Fourth Row of the widget"""
+        fourth_row = QHBoxLayout()
+        fourth_row.addLayout(expected_results_box)
 
 
         """ Main Vert Layout"""
@@ -106,6 +120,7 @@ class C5Calculator(QWidget):
         layout.addLayout(first_row)
         layout.addLayout(second_row)
         layout.addLayout(third_row)
+        layout.addLayout(fourth_row)
 
         """Layout Setter"""
         self.setLayout(layout)
